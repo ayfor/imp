@@ -7,12 +7,14 @@ import { AppComponent } from './app.component';
 import { TestComponent } from './test-component/test-component.component';
 import { ModalModule } from './_modal';
 import { CustomerTagComponent } from './customer-tag/customer-tag.component';
+import { CustomerDashboardComponent } from './customer-dashboard/customer-dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestComponent,
     CustomerTagComponent,
+    CustomerDashboardComponent,
   ],
   imports: [
     BrowserModule,
