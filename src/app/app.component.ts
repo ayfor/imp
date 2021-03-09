@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ModalService } from './_modal';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'imp';
+  constructor(public modal:ModalService){}
+
+  public sampleMessage = "This is a sample message."
+
+  openModal = function(id:string) {
+    this.modal.open(id);
+  }
 }

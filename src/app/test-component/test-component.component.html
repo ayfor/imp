@@ -1,0 +1,21 @@
+
+<div class="container">
+    <h1>Test Component: Data Binding</h1>
+    <form>
+        <input type="checkbox" name="test_checkbox" [(ngModel)]="checkedValue">
+        <label for="test_checkbox">Checked?{{checkedValue}}</label>
+    </form> 
+
+    <button (click)="toggleCheckboxProperty()"> Toggle Checkbox </button>
+</div>
+
+<div class="container">
+    <h1>Test Component: Template Variables</h1>
+    <form>
+        <input type="checkbox" name="test_checkbox" #varCheckbox (change)="toggleTemplateVariable(varCheckbox)">
+        <label for="test_checkbox">Checked?{{checkedValue}}</label>
+    </form> 
+
+    <button (click)="toggleTemplateVariable(varCheckbox)"> Toggle Checkbox </button>
+</div>
+
