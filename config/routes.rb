@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   root 'ingredients#index'
   
-  resources :recipes
-  resources :ingredients
-  resources :grocery_lists
+  resources :recipes, :ingredients, :grocery_lists
+
+  get '/ingredients/create', to: 'ingredients#create'
+
 end
