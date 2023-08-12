@@ -14,7 +14,7 @@
   </div>
   <div class="mt-5 flex lg:ml-4 lg:mt-0">
     <span class="hidden sm:block">
-      <%= button_to "New Ingredient" , ingredients_path, class: button_style({style: :primary}), data: { "turbo-method": "get" } %>
+      <%= button_to "New Ingredient" , ingredients_create_request_path, class: button_style({style: :primary}), method: :get, data: { 'turbo-stream': true, "turbo-method": "get" } %>
     </span>
     <span class="ml-3 hidden sm:block">
       <%= button_to "New Recipe" , new_recipe_path, class: button_style({style: :white}) %>
