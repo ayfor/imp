@@ -1,0 +1,43 @@
+# AllCops
+AllCops:
+  TargetRubyVersion: 3.0
+  Exclude:
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+
+# Style
+Style/Documentation:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: true
+Style/RedundantParentheses:
+  Enabled: true
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+  Enabled: true
+
+# Lint
+Lint/RedundantCopDisableDirective:
+  Enabled: true
+Lint/UnusedBlockArgument:
+  Enabled: true
+Lint/UnusedMethodArgument:
+  Enabled: true
+Lint/UselessAssignment:
+  Enabled: true
+
+# Rails
+Rails/ActionFilter:
+  Enabled: true
+Rails/OutputSafety:
+  Enabled: true
+Rails/ReflectionClassName:
+  Enabled: true
+Rails/TimeZone:
+  Enabled: true
+Rails/UnknownEnv:
+  Enabled: true
+Rails/UniqBeforePluck:
+  Enabled: true
+Rails/Validation:
+  Enabled: true
