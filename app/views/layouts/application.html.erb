@@ -10,7 +10,6 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
-    <%= turbo_frame_tag turbo_modal_id %>
     <div class="antialiased bg-gray-50 dark:bg-gray-900 w-screen">
       <nav class="bg-white border-b border-gray-200 px-4 py-2.5 dark:bg-gray-800 dark:border-gray-700 fixed left-0 right-0 top-0 z-50">
         <div class="flex flex-wrap justify-between items-center">
@@ -28,37 +27,37 @@
       </nav>
       <!-- Sidebar -->
       <aside
-      class="fixed top-0 left-0 z-40 w-64 h-screen pt-14 bg-white border-r border-gray-200 md:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
-      aria-label="Sidenav"
-      id="drawer-navigation"
+        class="fixed top-0 left-0 z-40 w-64 h-screen pt-14 bg-white border-r border-gray-200 md:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+        aria-label="Sidenav"
+        id="drawer-navigation"
       >
         <div class="overflow-y-auto py-5 px-3 h-full bg-white dark:bg-gray-800">
           <ul class="space-y-2">
             <li>
               <a
-                href="#"
-                class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
-              >
+          href="#"
+          class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
+        >
                 <%= render partial: "common/icons/storefront" %>
                 <span class="ml-3">My Pantry</span>
               </a>
             </li>
             <li>
               <button
-                type="button"
-                class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-              >
+          type="button"
+          class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+        >
                 <%= render partial: "common/icons/lists_clipboard" %>
                 <span class="flex-1 ml-3 text-left whitespace-nowrap"
-                  >Grocery Lists</span
-                >
+            >Grocery Lists</span
+          >
               </button>
             </li>
             <li>
               <button
-                type="button"
-                class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-              >
+          type="button"
+          class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+        >
                 <%= render partial: "common/icons/queue_list" %>
                 <span class="flex-1 ml-3 text-left whitespace-nowrap">
                   Recipes
@@ -66,10 +65,7 @@
                   </button>
                 </li>
                 <li>
-                  <button
-                type="button"
-                class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-              >
+                  <button type="button" class="flex items-center p-2 w-full text-base font-medium text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" >
                     <%= render partial: "common/icons/list" %>
                     <span class="flex-1 ml-3 text-left whitespace-nowrap">
                       All Ingredients
@@ -78,14 +74,8 @@
                     </li>
                   </ul>
                 </div>
-                <div
-          class="hidden absolute bottom-0 left-0 justify-start p-4 space-x-4 w-full lg:flex bg-white dark:bg-gray-800 z-20"
-        >
-                  <a
-            href="#"
-            data-tooltip-target="tooltip-settings"
-            class="inline-flex justify-center p-2 text-white rounded cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
-          >
+                <div class="hidden absolute bottom-0 left-0 justify-start p-4 space-x-4 w-full lg:flex bg-white dark:bg-gray-800 z-20">
+                  <a href="#" data-tooltip-target="tooltip-settings" class="inline-flex justify-center p-2 text-white rounded cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600">
                     <%= render partial: "common/icons/gear" %>
                     <span class="flex-1 ml-3 text-left text-white font-medium whitespace-nowrap">
                       Settings
@@ -93,10 +83,11 @@
                       </a>
                     </div>
                   </aside>
-                  <%# View Area %>
-                  <main class="p-8 ml-64 h-auto pt-20">
-                    <%= yield %>
-                  </main>
                 </div>
+                <%# View Area %>
+                <main class="relative ml-64 px-6 h-auto pt-20 bg-black">
+                  <%= turbo_frame_tag turbo_modal_id %>
+                  <%= yield %>
+                </main>
               </body>
             </html>
