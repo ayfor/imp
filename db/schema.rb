@@ -26,6 +26,7 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_28_200034) do
     t.date "expiration_date"
     t.integer "quantity", null: false
     t.string "unit", null: false
+    t.decimal "price"
   end
 
   create_table "recipes", force: :cascade do |t|
