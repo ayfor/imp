@@ -22,12 +22,11 @@ ActiveRecord::Schema[7.0].define(version: 2024_04_28_200034) do
   create_table "ingredients", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
-    t.integer "quantity"
-    t.string "unit"
-    t.datetime "expiry_date"
+    t.string "name", null: false
+    t.date "expiration_date"
+    t.integer "quantity", null: false
+    t.string "unit", null: false
     t.decimal "price"
-    t.float "weight"
   end
 
   create_table "recipes", force: :cascade do |t|
