@@ -8,7 +8,7 @@
       <%= form.label :quantity, 'Quantity' %>
       <%= form.number_field :quantity, class: 'form-control', placeholder: 'E.g., 1, 2, 3', required: true %>
       <%= form.label :unit, 'Unit' %>
-      <%= form.select :unit, Ingredient::UNITS, { include_blank: 'Select a unit' }, class: 'form-control', required: true %>
+      <%= form.select :unit, Ingredient.units, { include_blank: 'Select a unit' }, class: 'form-control', required: true %>
     </div>
   </div>
   <div class="modal-footer">
