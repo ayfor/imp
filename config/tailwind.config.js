@@ -10,11 +10,17 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: [
-          'aktiv-grotesk-extended',
-          'Lato',
-          ...defaultTheme.fontFamily.sans
-        ]
+        sans: ['acumin-pro', 'Lato', ...defaultTheme.fontFamily.sans]
+      },
+      colors: {
+        leftovers: {
+          yellow: '#EAC435',
+          blue: '#345995',
+          pink: '#E40066',
+          green: '#03CEA4',
+          red: '#C32F27',
+          orange: '#FB4D3D'
+        }
       }
     }
   },
