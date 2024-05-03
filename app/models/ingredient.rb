@@ -1,9 +1,7 @@
 class Ingredient < ApplicationRecord
-  @units = %w[piece g kg ml l].freeze
+  @units = %w[piece g kg ml l]
 
-  def self.units
-    @UNITS
-  end
+  attr_reader :units
 
   validates :name, presence: true
   validates :unit, inclusion: { in: @units }
