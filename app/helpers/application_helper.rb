@@ -7,11 +7,17 @@ module ApplicationHelper
   }
 
   def button_style(obj)
+    style = ''
     if obj.key?(:style)
-      @@registered_button_styles[obj[:style]]
+      style = @@registered_button_styles[obj[:style]]
     else
-      @@registered_button_styles[obj[:primary]]
+      style = @@registered_button_styles[obj[:primary]]
     end
+
+    if obj.key?(:is_link) && obj[:is_link]
+      style << ' inline-flex items-center justify-center'
+    end
+    style
   end
 
   def turbo_modal_id

@@ -10,7 +10,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Lato', ...defaultTheme.fontFamily.sans]
+        sans: [
+          'aktiv-grotesk-extended',
+          'Lato',
+          ...defaultTheme.fontFamily.sans
+        ]
       }
     }
   },
