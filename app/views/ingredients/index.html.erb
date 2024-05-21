@@ -14,7 +14,7 @@
   </div>
   <div class="mt-5 flex lg:ml-4 lg:mt-0">
     <span class="hidden sm:block">
-      <%= button_to "New Ingredient" , new_ingredient_path, class: button_style({style: :primary}), method: :get, data: { 'turbo-stream': true, "turbo-method": "get" } %>
+      <%= button_to "New Ingredient" , new_ingredient_path, class: button_style({style: :white}), method: :get, data: { 'turbo-stream': true, "turbo-method": "get" } %>
     </span>
     <span class="ml-3 hidden sm:block">
       <%= button_to "New Recipe" , new_recipe_path, class: button_style({style: :white}) %>
@@ -44,20 +44,22 @@
       </div>
     </div>
   </div>
+</div>
+<div class='container'>
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
     <div class="border-2 border-dashed rounded-lg border-gray-300 h-32 md:h-64"></div>
     <div class="border-2 border-dashed rounded-lg border-gray-300 h-32 md:h-64"></div>
     <div class="border-2 border-dashed rounded-lg border-gray-300 h-32 md:h-64"></div>
     <div class="border-2 border-dashed rounded-lg border-gray-300 h-32 md:h-64"></div>
   </div>
-  <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-96 mb-4"></div>
+  <div class="border-2 my-4 border-dashed rounded-lg border-gray-300 h-96"></div>
   <div class="grid grid-cols-2 gap-4 mb-4">
     <div class="border-2 border-dashed rounded-lg border-gray-300 h-48 md:h-72"></div>
     <div class="border-2 border-dashed rounded-lg border-gray-300 h-48 md:h-72"></div>
     <div class="border-2 border-dashed rounded-lg border-gray-300 h-48 md:h-72"></div>
     <div class="border-2 border-dashed rounded-lg border-gray-300 h-48 md:h-72"></div>
   </div>
-  <div class="border-2 border-dashed rounded-lg border-gray-300 dark:border-gray-600 h-96 mb-4"></div>
+  <div class="border-2 my-4 border-dashed rounded-lg border-gray-300 h-96"></div>
   <div class="grid grid-cols-2 gap-4">
     <div class="border-2 border-dashed rounded-lg border-gray-300 h-48 md:h-72"></div>
     <div class="border-2 border-dashed rounded-lg border-gray-300 h-48 md:h-72"></div>

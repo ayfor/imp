@@ -1,7 +1,9 @@
 class Ingredient < ApplicationRecord
   @units = %w[piece g kg ml l]
 
-  attr_reader :units
+  class << self
+    attr_reader :units
+  end
 
   validates :name, presence: true
   validates :unit, inclusion: { in: @units }
