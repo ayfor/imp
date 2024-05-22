@@ -19,8 +19,8 @@
   </div>
   <div class="modal-footer w-full flex flex-row-reverse my-2">
     <!-- Submit Button -->
-    <%= form.submit 'Save', class: button_style({style: :primary}) %>
+    <%= form.submit 'Save', class: button_style({style: :green }) + ' bg-leftovers-green ' %>
     <!-- Close Modal Button -->
-    <%= link_to "Cancel", root_path, method: :get, class: button_style({style: :alternate, is_link: true }) %>
+    <%= link_to "Cancel", root_path, method: :get, class: button_style({style: :alternate_green, is_link: true }) %>
   </div>
 <% end %>
