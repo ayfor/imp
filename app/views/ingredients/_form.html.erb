@@ -2,19 +2,25 @@
 <%= form_with(model: @ingredient) do |form| %>
   <div class="modal-body">
     <!-- Ingredient Name Field -->
-    <div class="form-group">
-      <%= form.label :name, 'Ingredient Name' %>
-      <%= form.text_field :name, class: 'form-control', placeholder: 'E.g., Apples, Potatoes', required: true %>
-      <%= form.label :quantity, 'Quantity' %>
-      <%= form.number_field :quantity, class: 'form-control', placeholder: 'E.g., 1, 2, 3', required: true %>
-      <%= form.label :unit, 'Unit' %>
-      <%= form.select :unit, Ingredient.units, { include_blank: 'Select a unit' }, class: 'form-control', required: true %>
+    <div class="form-group space-y-4">
+      <div>
+        <%= form.label :name, 'Ingredient Name', class: 'block text-sm font-medium text-gray-700' %>
+        <%= form.text_field :name, class: 'mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm', placeholder: 'E.g., Apples, Potatoes', required: true %>
+      </div>
+      <div>
+        <%= form.label :quantity, 'Quantity', class: 'block text-sm font-medium text-gray-700' %>
+        <%= form.number_field :quantity, class: 'mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm', placeholder: 'E.g., 1, 2, 3', required: true %>
+      </div>
+      <div>
+        <%= form.label :unit, 'Unit', class: 'block text-sm font-medium text-gray-700' %>
+        <%= form.select :unit, Ingredient.units, { include_blank: 'Select a unit' }, class: 'mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm', required: true %>
+      </div>
     </div>
   </div>
-  <div class="modal-footer">
+  <div class="modal-footer w-full flex flex-row-reverse my-2">
     <!-- Submit Button -->
-    <%= form.submit 'Save', class: 'btn btn-primary' %>
+    <%= form.submit 'Save', class: button_style({style: :primary}) %>
     <!-- Close Modal Button -->
-    <%= link_to "Go back to Dashboard", root_path, method: :get, class: button_style({style: :wide, is_link: true }) %>
+    <%= link_to "Cancel", root_path, method: :get, class: button_style({style: :alternate, is_link: true }) %>
   </div>
 <% end %>
