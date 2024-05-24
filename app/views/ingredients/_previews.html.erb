@@ -1,0 +1,9 @@
+<h1 class="text-2xl font-bold mb-4">Recent Ingredients</h1>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+  <% recent_ingredients.each do |ingredient| %>
+    <div class="bg-white border-2 border-leftovers-green shadow-md rounded-lg p-6">
+      <h2 class="text-lg font-semibold text-gray-800"><%= ingredient.name %></h2>
+      <p class="text-gray-600"><%= ingredient.quantity %> <%= ingredient.unit %></p>
+    </div>
+  <% end %>
+</div>

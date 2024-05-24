@@ -2,7 +2,9 @@
 
 # Ingredient Controller
 class IngredientsController < ApplicationController
-  def index; end
+  def index
+    @recent_ingredients = Ingredient.order(created_at: :desc).limit(4)
+  end
 
   def new
     @ingredient = Ingredient.new
